@@ -27,7 +27,7 @@ services:
   celery_worker:
     build: .
     image: celery_worker
-    command: celery -A project_name worker -l info
+    command: celery -A {{ project_name }} worker -l info
     env_file:
       - .env
     depends_on:
