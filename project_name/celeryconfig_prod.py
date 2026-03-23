@@ -8,8 +8,8 @@ broker_url = f'redis://{redis_host}:{redis_port}/0'
 
 broker_transport_options = {'visibility_timeout': 3600}
 
-# accept_content = ['application/json']
-accept_content = ['json']
+accept_content = ['application/json']
+# accept_content = ['pickle', 'json']
 task_serializer = 'json'###тут відбувається балячка з pickle сереалізатором 
 result_serializer = 'json'##тобто ці параметри працють саме глобально для всього і не можна окремо ізолювати до кожної таски інший серелізатор 
 
